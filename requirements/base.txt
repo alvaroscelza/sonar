@@ -6,3 +6,6 @@ factory-boy
 
 # Environment
 python-dotenv
+
+# Image Handling
+Pillow==9.3.0
