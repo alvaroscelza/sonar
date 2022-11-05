@@ -11,6 +11,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 BASE_DIR = Path(__file__).parent.parent.parent
 DJANGO_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -22,6 +23,7 @@ LOCAL_APPS = [
 ]
 EXTERNAL_APPS = []
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + EXTERNAL_APPS
+LOGIN_URL = '/admin/login/?next=/admin/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
