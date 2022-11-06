@@ -1,6 +1,10 @@
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+
+from applications.core.models import Post
 
 
 @login_required
 def get_posts(request):
-    pass
+    posts = Post.objects.all()
+    return render(request, 'posts/index.html', {'posts': posts})
