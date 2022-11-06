@@ -1,8 +1,10 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path
 from django.views.generic import RedirectView
+
+from applications.core import views
 
 # region Admin configuration
 urlpatterns = [path('admin/', admin.site.urls)]
@@ -13,8 +15,8 @@ admin.site.site_title = settings.APP_NAME
 
 # region Core configuration
 urlpatterns += [
-    path('', RedirectView.as_view(url='core/posts')),
-    path('core/', include('applications.core.urls'))
+    path('', views.get_posts, name='posts'),
+    path('login/', RedirectView.as_view(pattern_name='posts')),
 ]
 # endregion
 
