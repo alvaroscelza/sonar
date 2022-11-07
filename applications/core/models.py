@@ -8,7 +8,7 @@ class Post(models.Model):
     image_src = models.ImageField(upload_to='post', default='post/default_image.png')
 
 
-class ActivityLogs(models.Model):
+class ActivityLog(models.Model):
     class InteractionTypes(models.TextChoices):
         LIKE = 'like', 'Like'
         VIEW = 'view', 'View'

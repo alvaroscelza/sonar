@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='ActivityLogs',
+            name='ActivityLog',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('interaction_type', models.CharField(choices=[('like', 'Like'), ('view', 'View')], max_length=4)),
