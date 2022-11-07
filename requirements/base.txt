@@ -1,8 +1,6 @@
 # WEB / API
 Django
-
-# Tests and low level design
-factory-boy
+Faker==15.2.0
 
 # Environment
 python-dotenv
