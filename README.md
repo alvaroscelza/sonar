@@ -16,13 +16,13 @@ Tech challenge for SonarHealth
 - Install requirements:
     -   Development: `pip install -r requirements/development.txt`
     -   Production: `pip install -r requirements/production.txt`
-- Install pre-commit hooks feature: `pre-commit install`
 - Create `.env` file at project root. File .env-example is provided as a guide of this file's content.
 Make sure you copy your SECRET_KEY there.
 - Generate migration files: `python manage.py makemigrations`
-- Run migrations: `python manage.py migrate`
+- Run migrations: `python manage.py migrate`. Heads up: this will take some time since it will
+insert the test data, watch the console for progress.
 - Create superuser: `python manage.py createsuperuser`
-This is the user you will use to login and create new users if needed.
+This is the user you will use to log in and create new users if needed.
 To create new users, go to http://localhost:8000/admin and login with the superuser credentials.
 - Run using `python manage.py runserver`
 - To see the documentation diagrams you require [Graphviz](https://graphviz.org/).
