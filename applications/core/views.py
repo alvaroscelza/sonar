@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from applications.core.models import Post
 
@@ -12,4 +12,5 @@ def get_posts(request):
 
 @login_required
 def get_post(request, post_id):
-    return render(request, 'posts/detail.html')
+    post = get_object_or_404(Post, pk=post_id)
+    return render(request, 'posts/detail.html', {'post': post})
