@@ -14,7 +14,8 @@ admin.site.site_title = settings.APP_NAME
 
 # region Core configuration
 urlpatterns += [
-    path('', views.get_posts, name='posts'),
     path('login/', RedirectView.as_view(pattern_name='posts')),
+    path('', views.get_posts, name='posts'),
+    path('<post_id>', views.get_post, name='post'),
 ]
 # endregion
