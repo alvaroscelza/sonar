@@ -6,6 +6,7 @@ class Post(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     image_src = models.ImageField(upload_to='post', default='post/default_image.png')
+    likes_amount = models.IntegerField(default=0)
 
 
 class ActivityLog(models.Model):
