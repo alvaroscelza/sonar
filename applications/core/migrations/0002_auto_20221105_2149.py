@@ -36,7 +36,7 @@ def create_posts(apps, schema_editor):
         print(f'Creating Post {index + 1}/20')
         title = f'Post {index + 1}'
         description = f'Description for post {index + 1}'
-        image_url = 'https://picsum.photos/200/300'
+        image_url = f'https://picsum.photos/seed/{index + 1}/200/300'
         post_model.objects.create(title=title, description=description, image_src=image_url)
 
 
