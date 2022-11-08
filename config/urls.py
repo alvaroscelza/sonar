@@ -17,5 +17,6 @@ urlpatterns += [
     path('login/', RedirectView.as_view(pattern_name='posts')),
     path('', views.get_posts, name='posts'),
     path('<post_id>', views.get_post, name='post'),
+    path('<post_id>/like', views.like_post, name='like_post'),
 ]
 # endregion
