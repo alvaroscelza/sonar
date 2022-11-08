@@ -5,6 +5,10 @@
 
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
+        <a href="{% url 'post' post.id %}">
+            <img src="{{ post.image_src }}" alt="{{ post.title }}">
+        </a>
+        <button>Like</button>
         <a href="{% url 'post' post.id %}">details</a>
     {% endfor %}
 {% endblock %}
