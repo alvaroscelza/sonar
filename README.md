@@ -25,7 +25,6 @@ insert the test data, watch the console for progress.
 This is the user you will use to log in and create new users if needed.
 To create new users, go to http://localhost:8000/admin and login with the superuser credentials.
 - Run using `python manage.py runserver`
-- To see the documentation diagrams you require [Graphviz](https://graphviz.org/).
 
 
 ## WIP
