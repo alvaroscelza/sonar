@@ -17,6 +17,8 @@ def get_posts(request):
 @require_http_methods(["GET"])
 def get_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
+    post.views_amount += 1
+    post.save()
     ActivityLog.objects.create(user=request.user, interaction_type=ActivityLog.InteractionTypes.VIEW)
     return render(request, 'posts/detail.html', {'post': post})
 
