@@ -1,4 +1,9 @@
 services:
+    migration:
+        build: .
+        command: python manage.py migrate --noinput
+        volumes:
+            - .:/code
     web:
         build: .
         ports:
@@ -6,3 +11,5 @@ services:
         volumes:
             - .:/code
         command: python manage.py runserver 0.0.0.0:8000
+        depends_on:
+            - migration
