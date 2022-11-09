@@ -8,14 +8,14 @@
     <p>Top 5 most viewed posts</p>
     <ul>
         {% for post in most_viewed_posts %}
-            <li>{{ post.title }} - {{ post.views }} views</li>
+            <li>{{ post.title }} - {{ post.views_amount }} views</li>
         {% endfor %}
     </ul>
 
     <p>Top 5 most liked posts</p>
     <ul>
         {% for post in most_liked_posts %}
-            <li>{{ post.title }} - {{ post.likes }} likes</li>
+            <li>{{ post.title }} - {{ post.likes_amount }} likes</li>
         {% endfor %}
     </ul>
 {% endblock %}
