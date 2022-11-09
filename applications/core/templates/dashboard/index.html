@@ -1,0 +1,21 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+
+    <p>Number of registered Users: {{ users_amount }}</p>
+
+    <p>Top 5 most viewed posts</p>
+    <ul>
+        {% for post in most_viewed_posts %}
+            <li>{{ post.title }} - {{ post.views }} views</li>
+        {% endfor %}
+    </ul>
+
+    <p>Top 5 most liked posts</p>
+    <ul>
+        {% for post in most_liked_posts %}
+            <li>{{ post.title }} - {{ post.likes }} likes</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
