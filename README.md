@@ -1,6 +1,13 @@
 # Sonar
 
-Tech challenge for SonarHealth
+Tech challenge for SonarHealth.
+Important note: you requested the usage of at least one design pattern. I'm using decorator pattern:
+https://en.wikipedia.org/wiki/Decorator_pattern
+
+- @login_required
+- @require_http_methods
+
+Both provided by Django.
 
 ## Technology Stack
 
