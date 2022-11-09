@@ -26,43 +26,7 @@ This is the user you will use to log in and create new users if needed.
 To create new users, go to http://localhost:8000/admin and login with the superuser credentials.
 - Run using `python manage.py runserver`
 
+### With Docker
 
-## WIP
-
-[//]: # (### With Docker)
-
-[//]: # ()
-[//]: # (-   Create `docker-compose.yml` &#40;you may use docker-compose.example.yml as reference&#41;)
-
-[//]: # (-   Make sure to have Docker running on your system &#40;in mac, you should have docker icon in top menu&#41;.)
-
-[//]: # (-   Run using: `docker-compose up`)
-
-[//]: # ()
-[//]: # (## Testing)
-
-[//]: # ()
-[//]: # (### Without Docker)
-
-[//]: # ()
-[//]: # (-   Run the tests with `python manage.py test`)
-
-[//]: # (- Get test coverage with:)
-
-[//]: # (  - `coverage run --source='.' manage.py test`)
-
-[//]: # (  - `coverage report --skip-covered --show-missing`)
-
-[//]: # ()
-[//]: # (### With Docker)
-
-[//]: # ()
-[//]: # (-   Make sure your service name for the django app is `web` or change it accordingly in the following commands.)
-
-[//]: # (-   Run the tests with `docker-compose run web python manage.py test`)
-
-[//]: # (-   Get test coverage with:)
-
-[//]: # (    -   `docker-compose run web coverage run --source='.' manage.py test`)
-
-[//]: # (    -   `docker-compose run web coverage report --skip-covered --show-missing`)
+-   Make sure to have Docker running on your system (in mac or windows, you should have docker desktop running).
+-   Run using: `docker-compose up`
